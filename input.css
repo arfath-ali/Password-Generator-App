@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url(font/JetBrains_Mono/JetBrainsMono-Bold.ttf);
+    font-style: normal;
+  }
+}
+
+@layer utilities {
+  .range::-webkit-slider-thumb {
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    background-color: #e6e5ea;
+    border-radius: 50%;
+    border: 2px solid #e6e5ea;
+  }
+
+  .range::-webkit-slider-thumb:hover {
+    border-color: #a4ffaf;
+    background-color: #18171f;
+  }
+
+  .range::-moz-range-thumb {
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    background-color: #e6e5ea;
+    border-radius: 50%;
+    border: 2px solid #e6e5ea;
+  }
+
+  .range::-moz-range-thumb:hover {
+    border-color: #a4ffaf;
+    background-color: #18171f;
+  }
+}

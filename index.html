@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="output.css" />
+  <script defer src="./script.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <title>Frontend Mentor | Password generator app</title>
+</head>
+
+<body class="bg-eclipseBlack font-jetbrains font-bold">
+  <header class="hidden"></header>
+
+  <main class="mx-4 mt-16 mb-[63px] max-w-[540px] mobileLarge:mx-auto tablet:mt-[133px] tablet:mb-[196px]">
+    <h1 class="mb-4 text-center text-base text-mutedLavenderGray leading-[21px] tablet:mb-[31px] tablet:text-xl tablet:leading-8">
+      Password Generator
+    </h1>
+
+    <section
+      class="mb-4 flex items-center justify-between bg-midnightCharcoal pb-[15px] pl-4 pr-[15.5px] pt-[17px] tablet:mb-6 tablet:px-8 tablet:py-[19px]">
+      <p class="passwordDisplayer text-xl text-softMist opacity-25 leading-8 tablet:text-2xl tablet:leading-[42px]">
+        P4$5W0rD!
+      </p>
+      <div class="icon-copy-container">
+        <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg" class="icon-copy-svg">
+          <path
+            d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z"
+            fill="#A4FFAF" class="icon-copy-path" />
+        </svg>
+      </div>
+    </section>
+
+    <section class="flex flex-col gap-2 bg-midnightCharcoal p-4 tablet:px-8">
+      <div class="mb-2 flex justify-between items-center tablet:mb-4">
+        <h2 class="text-base text-softMist leading-[21px] tablet:text-lg tablet:leading-6">
+          Character Length
+        </h2>
+        <p class="rangeValue text-xl text-mintGlow leading-8 tablet:text-2xl tablet:leading-[42px]"></p>
+      </div>
+      <div>
+        <input type="range" min="0" max="20" value="0" name="range"
+          class="range h-2 w-full appearance-none bg-eclipseBlack outline-none hover:cursor-pointer" />
+      </div>
+    </section>
+
+    <section>
+      <ul class="flex flex-col gap-4 bg-midnightCharcoal p-4 text-softMist leading-[21px] tablet:gap-5 tablet:px-8 tablet:leading-6">
+        <li class="flex items-center gap-5">
+          <input id="uppercase" type="checkbox" name="uppercase"
+            class="checkbox-uppercase h-[20px] w-[20px] appearance-none border-2 border-solid border-softMist bg-center bg-no-repeat checked:border-transparent checked:bg-mintGlow checked:bg-[url(images/icon-check.svg)] hover:cursor-pointer hover:border-mintGlow" />
+          <label for="uppercase" class="text-base tablet:text-lg">Include Uppercase Letters</label>
+        </li>
+
+        <li class="flex items-center gap-5">
+          <input id="lowercase" type="checkbox" name="lowercase"
+            class="checkbox-lowercase h-[20px] w-[20px] appearance-none border-2 border-solid border-softMist bg-center bg-no-repeat checked:border-transparent checked:bg-mintGlow checked:bg-[url(images/icon-check.svg)] hover:cursor-pointer hover:border-mintGlow" />
+          <label for="lowercase" class="text-base tablet:text-lg">Include Lowercase Letters</label>
+        </li>
+
+        <li class="flex items-center gap-5">
+          <input id="numbers" type="checkbox" name="numbers"
+            class="checkbox-numbers h-[20px] w-[20px] appearance-none border-2 border-solid border-softMist bg-center bg-no-repeat checked:border-transparent checked:bg-mintGlow checked:bg-[url(images/icon-check.svg)] hover:cursor-pointer hover:border-mintGlow" />
+          <label for="numbers" class="text-base tablet:text-lg">Include Numbers</label>
+        </li>
+
+        <li class="flex items-center gap-5">
+          <input id="symbols" type="checkbox" name="symbols"
+            class="checkbox-symbols h-[20px] w-[20px] appearance-none border-2 border-solid border-softMist bg-center bg-no-repeat checked:border-transparent checked:bg-mintGlow checked:bg-[url(images/icon-check.svg)] hover:cursor-pointer hover:border-mintGlow" />
+          <label for="symbols" class="text-base tablet:text-lg">Include Symbols</label>
+        </li>
+      </ul>
+    </section>
+
+    <section class="bg-midnightCharcoal p-4 tablet:px-8 tablet:pb-8">
+      <div
+        class="flex items-center justify-between bg-eclipseBlack px-4 py-[14px] tablet:pb-5 tablet:pl-8 tablet:pr-[31.5px] tablet:pt-[21px]">
+        <p class="text-base uppercase text-mutedLavenderGray leading-[21px] tablet:text-lg tablet:leading-6">
+          Strength
+        </p>
+
+        <div class="flex items-center gap-4">
+          <p class="strength-label text-lg uppercase text-softMist tablet:text-xl"></p>
+          <div class="flex gap-2">
+            <div
+              class="strength-indicators too-weak-indicator weak-indicators medium-indicators strong-indicators h-[28px] w-[10px] border-2 border-solid border-softMist">
+            </div>
+            <div
+              class="strength-indicators weak-indicators medium-indicators strong-indicators h-[28px] w-[10px] border-2 border-solid border-softMist">
+            </div>
+            <div
+              class="strength-indicators medium-indicators strong-indicators h-[28px] w-[10px] border-2 border-solid border-softMist">
+            </div>
+            <div class="strength-indicators strong-indicators h-[28px] w-[10px] border-2 border-solid border-softMist">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-midnightCharcoal px-4 pb-4 tablet:px-8 tablet:pb-8">
+      <div
+        class="generate-button-container flex items-center justify-center gap-4 border-2 border-solid border-mintGlow bg-mintGlow  pb-[15px] pt-[16px] hover:cursor-pointer hover:bg-midnightCharcoal hover:text-mintGlow tablet:gap-6 tablet:pt-[19px] tablet:pb-[18px]">
+        <button class="text-base uppercase leading-[21px] tablet:text-lg tablet:leading-6">Generate</button>
+        <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+          <path class="icon-arrow-path" fill="#24232C"
+            d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" />
+        </svg>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hidden"></footer>
+</body>
+
+</html>
